@@ -50,14 +50,16 @@ public class BasicDemoScript : MonoBehaviour
         { AppState.DemoStepPlaceChest, new DemoStepParams(){ StepMessage = "Tap to Place a chest" }},
         { AppState.DemoStepConfirmPlacement, new DemoStepParams(){ StepMessage = "Placement Complete.  Switch user." }},
         { AppState.DemoStepSearching, new DemoStepParams(){ StepMessage = $"Locate the lost items." }},
-        { AppState.DemoStepFoundAllItems, new DemoStepParams(){ StepMessage = "You've found all items! Yay!" }},
-        { AppState.DemoStepComplete, new DemoStepParams(){ StepMessage = "Demo Complete" }}
+        { AppState.DemoStepFoundAllItems, new DemoStepParams(){ StepMessage = "Chest unlocked!  Tap to open" }},
+        { AppState.DemoStepComplete, new DemoStepParams(){ StepMessage = "Enjoy the loot matey!" }}
     };
 
     [SerializeField]
     private TMP_Text feedbackBox;
     [SerializeField]
     private GameObject confirmButton;
+    [SerializeField]
+    private GameObject inventory;
 
     [SerializeField]
     private GameObject keyPrefab;
@@ -87,11 +89,6 @@ public class BasicDemoScript : MonoBehaviour
         {
             feedbackBox.text += " " + (3 - objectsFound) + " Remain!";
         }
-        if(objectsFound == 3)
-        {
-            AdvanceDemo();
-            objectsFound = 4;
-        }
     }
 
     public void HideObjects()
@@ -108,6 +105,17 @@ public class BasicDemoScript : MonoBehaviour
     {
         confirmButton.SetActive(true);
     }
+
+    public void ShowInventory()
+    {
+        inventory.SetActive(true);
+    }
+
+    public void HideInventory()
+    {
+        inventory.SetActive(false);
+    }
+
 
     public void AdvanceDemo()
     {
@@ -131,15 +139,21 @@ public class BasicDemoScript : MonoBehaviour
                 arTapToPlace.EnableIndicator(false);
                 HideObjects();
                 ShowButton();
+                ChestManager chestManager = FindObjectOfType<ChestManager>();
+                chestManager.placing = false;
                 currentAppState = AppState.DemoStepConfirmPlacement;
                 break;
             case AppState.DemoStepConfirmPlacement:
                 HideButton();
+                ShowInventory();
                 searching = true;
+                InventoryManager inventoryManager = FindObjectOfType<InventoryManager>();
+                inventoryManager.SearchBegins();
                 currentAppState = AppState.DemoStepSearching;
                 break;
             case AppState.DemoStepSearching:
                 ShowButton();
+                HideInventory();
                 searching = false;
                 currentAppState = AppState.DemoStepFoundAllItems;
                 break;

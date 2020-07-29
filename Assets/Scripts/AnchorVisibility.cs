@@ -21,18 +21,38 @@ public class AnchorVisibility : MonoBehaviour
         if(distanceToWaypoint < 1 && demoScript.searching && !objectFound)
         {
             objectFound = true;
+            demoScript.objectsFound++;
+            Debug.Log(this.gameObject.transform.GetChild(0).name);
+            if(this.gameObject.transform.GetChild(0).name.Contains("ChestContainer"))
+            {
+                Debug.Log("Found Chest Container");
+                ChestManager chestManager = this.gameObject.transform.GetChild(0).GetComponent<ChestManager>();
+                Debug.Log("Chest Manager");
+                chestManager.found = true;
+                Debug.Log("chestmanager found");
+                return;
+            }
+
+            InventoryManager inventoryManager = FindObjectOfType<InventoryManager>();
+            if(this.gameObject.transform.GetChild(0).name.Contains("KeyContainer"))
+            {
+                inventoryManager.KeyFound();
+            }
+            else if (this.gameObject.transform.GetChild(0).name.Contains("ShovelContainer"))
+            {
+                inventoryManager.ShovelFound();
+            }
+
             Animator[] animators = this.gameObject.GetComponentsInChildren<Animator>();
             foreach (Animator a in animators)
             {
                 a.enabled = true;
             }
-            var meshRenderers = this.gameObject.GetComponentsInChildren<Renderer>();
-            foreach (Renderer m in meshRenderers)
+            var renderers = this.gameObject.GetComponentsInChildren<Renderer>();
+            foreach (Renderer r in renderers)
             {
-                m.enabled = true;
+                r.enabled = true;
             }
-            //this.gameObject.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().enabled = true;
-            FindObjectOfType<BasicDemoScript>().objectsFound++;
         }
     }
 }
