@@ -4,7 +4,7 @@
             "outputFile": "/Users/pariskaman/Desktop/UnityProjects/SimpleARDemo/Temp/gradleOut/launcher/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-sl/values-sl.xml",
             "map": [
                 {
-                    "source": "/Users/pariskaman/.gradle/caches/transforms-2/files-2.1/ccab0b4118002848e5ee1927af5b49c0/res/values-sl/values.xml",
+                    "source": "/Users/pariskaman/.gradle/caches/transforms-2/files-2.1/79a61c784f4b649822ddb9ea8f933ad8/res/values-sl/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8",
                         "startColumns": "0,0,0,0,0",

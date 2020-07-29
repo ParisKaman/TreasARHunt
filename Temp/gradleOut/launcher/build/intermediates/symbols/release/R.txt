@@ -1,6 +1,7 @@
 int id __arcore_cancelButton 0x7f010000
 int id __arcore_continueButton 0x7f010001
 int id __arcore_messageText 0x7f010002
+int id unitySurfaceView 0x7f010003
 int layout __arcore_education 0x7f020000
 int mipmap app_icon 0x7f030000
 int mipmap app_icon_round 0x7f030001

@@ -91,7 +91,39 @@ public class ARTapToPlace : MonoBehaviour
     {
         foreach (ARAnchor anchor in aRAnchors)
         {
-            anchor.gameObject.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().enabled = false;
+            Animator[] animators = anchor.gameObject.GetComponentsInChildren<Animator>();
+            foreach (Animator a in animators)
+            {
+                a.enabled = false;
+            }
+            Renderer[] renderers = anchor.gameObject.GetComponentsInChildren<Renderer>();
+            foreach (Renderer r in renderers)
+            {
+                r.enabled = false;
+            }
+            //anchor.gameObject.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().enabled = false;
+        }
+    }
+
+    private void HideObjectAndChildren(GameObject go)
+    {
+        //attempt to hide Object
+        Debug.Log("Attempting to hide " + go.transform.name);
+        MeshRenderer meshRenderer = go.GetComponent<MeshRenderer>();
+        if(meshRenderer != null)
+        {
+            meshRenderer.enabled = false;
+            Debug.Log(go.transform.name + " rendered = " + meshRenderer.enabled);
+        }
+
+        //iterate through children and call method on that child
+        if(go.transform.childCount > 0)
+        {
+            Debug.Log(go.transform.name + " has " + go.transform.childCount + " children.");
+            for(int i = 0; i < go.transform.childCount; i++)
+            {
+                HideObjectAndChildren(go.transform.GetChild(i).gameObject);
+            }
         }
     }
 
@@ -114,25 +146,16 @@ public class ARTapToPlace : MonoBehaviour
     {
         if(spawnedObject == null)
         {
-          //instantiate objectToPlace at the placement location
           spawnedObject = Instantiate(objectToPlace, placementPose.position, placementPose.rotation);
           ShowConfirmButton();
         }
         else
         {
-          //anchor already exists, so we move it instead
           spawnedObject.transform.position = placementPose.position;
           spawnedObject.transform.rotation = placementPose.rotation;
           movingAnchor = true;
         }
 
-
-        //Add a cloudNativeAnchor component to the gameobject so that the manager can track it
-        //if(currentCloudSpatialAnchor == null)
-        //{
-        //    CloudNativeAnchor cloudNativeAnchor = spawnedObject.GetComponent<CloudNativeAnchor>();
-        //    cloudNativeAnchor.CloudToNative(currentCloudSpatialAnchor);
-        //}
         lastPosePlaced = placementPose;
     }
 

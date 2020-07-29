@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <item name="unitySurfaceView" type="id"/>
     <string name="__arcore_cancel">Cancel</string>
     <string name="__arcore_continue">Continue</string>
     <string name="__arcore_install_app">This application requires the latest version of Google Play Services for AR.</string>

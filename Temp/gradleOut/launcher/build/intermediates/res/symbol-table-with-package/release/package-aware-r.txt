@@ -2,6 +2,7 @@ com.DefaultCompany.SimpleARDemo
 id __arcore_cancelButton
 id __arcore_continueButton
 id __arcore_messageText
+id unitySurfaceView
 layout __arcore_education
 mipmap app_icon
 mipmap app_icon_round

@@ -70,6 +70,7 @@ public class BasicDemoScript : MonoBehaviour
 
     public bool searching = false;
     public int objectsFound = 0;
+    public bool foundAllItems = false;
 
     // Start is called before the first frame update
     void Start()
@@ -143,6 +144,7 @@ public class BasicDemoScript : MonoBehaviour
                 break;
             case AppState.DemoStepFoundAllItems:
                 HideButton();
+                foundAllItems = true;
                 currentAppState = AppState.DemoStepComplete;
                 break;
             case AppState.DemoStepComplete:

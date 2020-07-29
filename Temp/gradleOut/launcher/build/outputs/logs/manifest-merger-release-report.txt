@@ -5,7 +5,9 @@ INJECTED from /Users/pariskaman/Desktop/UnityProjects/SimpleARDemo/Temp/gradleOu
 INJECTED from /Users/pariskaman/Desktop/UnityProjects/SimpleARDemo/Temp/gradleOut/launcher/src/main/AndroidManifest.xml:3:1-6:12
 INJECTED from /Users/pariskaman/Desktop/UnityProjects/SimpleARDemo/Temp/gradleOut/launcher/src/main/AndroidManifest.xml:3:1-6:12
 MERGED from [:unityLibrary] /Users/pariskaman/Desktop/UnityProjects/SimpleARDemo/Temp/gradleOut/unityLibrary/build/intermediates/library_manifest/release/AndroidManifest.xml:3:1-75:12
-MERGED from [:arcore_client:] /Users/pariskaman/.gradle/caches/transforms-2/files-2.1/ccab0b4118002848e5ee1927af5b49c0/AndroidManifest.xml:17:1-46:12
+MERGED from [:ARPresto:] /Users/pariskaman/.gradle/caches/transforms-2/files-2.1/a0f4f84b7a68b757124541e43009b94c/AndroidManifest.xml:2:1-11:12
+MERGED from [:UnityARCore:] /Users/pariskaman/.gradle/caches/transforms-2/files-2.1/44c9ed482d95d92e1fb2f06e924c3e88/AndroidManifest.xml:2:1-11:12
+MERGED from [:arcore_client:] /Users/pariskaman/.gradle/caches/transforms-2/files-2.1/79a61c784f4b649822ddb9ea8f933ad8/AndroidManifest.xml:17:1-46:12
 MERGED from [:unityandroidpermissions:] /Users/pariskaman/.gradle/caches/transforms-2/files-2.1/529de40b8ab4ecbd7332dc04c6c84e8f/AndroidManifest.xml:6:1-15:12
 INJECTED from /Users/pariskaman/Desktop/UnityProjects/SimpleARDemo/Temp/gradleOut/launcher/src/main/AndroidManifest.xml:3:1-6:12
 INJECTED from /Users/pariskaman/Desktop/UnityProjects/SimpleARDemo/Temp/gradleOut/launcher/src/main/AndroidManifest.xml:3:1-6:12
@@ -44,8 +46,8 @@ application
 ADDED from /Users/pariskaman/Desktop/UnityProjects/SimpleARDemo/Temp/gradleOut/launcher/src/main/AndroidManifest.xml:5:3-83
 MERGED from [:unityLibrary] /Users/pariskaman/Desktop/UnityProjects/SimpleARDemo/Temp/gradleOut/unityLibrary/build/intermediates/library_manifest/release/AndroidManifest.xml:33:5-73:19
 MERGED from [:unityLibrary] /Users/pariskaman/Desktop/UnityProjects/SimpleARDemo/Temp/gradleOut/unityLibrary/build/intermediates/library_manifest/release/AndroidManifest.xml:33:5-73:19
-MERGED from [:arcore_client:] /Users/pariskaman/.gradle/caches/transforms-2/files-2.1/ccab0b4118002848e5ee1927af5b49c0/AndroidManifest.xml:30:5-44:19
-MERGED from [:arcore_client:] /Users/pariskaman/.gradle/caches/transforms-2/files-2.1/ccab0b4118002848e5ee1927af5b49c0/AndroidManifest.xml:30:5-44:19
+MERGED from [:arcore_client:] /Users/pariskaman/.gradle/caches/transforms-2/files-2.1/79a61c784f4b649822ddb9ea8f933ad8/AndroidManifest.xml:30:5-44:19
+MERGED from [:arcore_client:] /Users/pariskaman/.gradle/caches/transforms-2/files-2.1/79a61c784f4b649822ddb9ea8f933ad8/AndroidManifest.xml:30:5-44:19
 	android:label
 		ADDED from /Users/pariskaman/Desktop/UnityProjects/SimpleARDemo/Temp/gradleOut/launcher/src/main/AndroidManifest.xml:5:16-48
 	android:icon
@@ -56,8 +58,12 @@ INJECTED from /Users/pariskaman/Desktop/UnityProjects/SimpleARDemo/Temp/gradleOu
 INJECTED from /Users/pariskaman/Desktop/UnityProjects/SimpleARDemo/Temp/gradleOut/launcher/src/main/AndroidManifest.xml
 MERGED from [:unityLibrary] /Users/pariskaman/Desktop/UnityProjects/SimpleARDemo/Temp/gradleOut/unityLibrary/build/intermediates/library_manifest/release/AndroidManifest.xml:9:5-11:41
 MERGED from [:unityLibrary] /Users/pariskaman/Desktop/UnityProjects/SimpleARDemo/Temp/gradleOut/unityLibrary/build/intermediates/library_manifest/release/AndroidManifest.xml:9:5-11:41
-MERGED from [:arcore_client:] /Users/pariskaman/.gradle/caches/transforms-2/files-2.1/ccab0b4118002848e5ee1927af5b49c0/AndroidManifest.xml:26:5-28:41
-MERGED from [:arcore_client:] /Users/pariskaman/.gradle/caches/transforms-2/files-2.1/ccab0b4118002848e5ee1927af5b49c0/AndroidManifest.xml:26:5-28:41
+MERGED from [:ARPresto:] /Users/pariskaman/.gradle/caches/transforms-2/files-2.1/a0f4f84b7a68b757124541e43009b94c/AndroidManifest.xml:7:5-9:41
+MERGED from [:ARPresto:] /Users/pariskaman/.gradle/caches/transforms-2/files-2.1/a0f4f84b7a68b757124541e43009b94c/AndroidManifest.xml:7:5-9:41
+MERGED from [:UnityARCore:] /Users/pariskaman/.gradle/caches/transforms-2/files-2.1/44c9ed482d95d92e1fb2f06e924c3e88/AndroidManifest.xml:7:5-9:41
+MERGED from [:UnityARCore:] /Users/pariskaman/.gradle/caches/transforms-2/files-2.1/44c9ed482d95d92e1fb2f06e924c3e88/AndroidManifest.xml:7:5-9:41
+MERGED from [:arcore_client:] /Users/pariskaman/.gradle/caches/transforms-2/files-2.1/79a61c784f4b649822ddb9ea8f933ad8/AndroidManifest.xml:26:5-28:41
+MERGED from [:arcore_client:] /Users/pariskaman/.gradle/caches/transforms-2/files-2.1/79a61c784f4b649822ddb9ea8f933ad8/AndroidManifest.xml:26:5-28:41
 MERGED from [:unityandroidpermissions:] /Users/pariskaman/.gradle/caches/transforms-2/files-2.1/529de40b8ab4ecbd7332dc04c6c84e8f/AndroidManifest.xml:11:5-13:41
 MERGED from [:unityandroidpermissions:] /Users/pariskaman/.gradle/caches/transforms-2/files-2.1/529de40b8ab4ecbd7332dc04c6c84e8f/AndroidManifest.xml:11:5-13:41
 INJECTED from /Users/pariskaman/Desktop/UnityProjects/SimpleARDemo/Temp/gradleOut/launcher/src/main/AndroidManifest.xml
@@ -179,22 +185,22 @@ ADDED from [:unityLibrary] /Users/pariskaman/Desktop/UnityProjects/SimpleARDemo/
 	android:name
 		ADDED from [:unityLibrary] /Users/pariskaman/Desktop/UnityProjects/SimpleARDemo/Temp/gradleOut/unityLibrary/build/intermediates/library_manifest/release/AndroidManifest.xml:71:13-46
 meta-data#com.google.ar.core.min_apk_version
-ADDED from [:arcore_client:] /Users/pariskaman/.gradle/caches/transforms-2/files-2.1/ccab0b4118002848e5ee1927af5b49c0/AndroidManifest.xml:33:9-35:41
+ADDED from [:arcore_client:] /Users/pariskaman/.gradle/caches/transforms-2/files-2.1/79a61c784f4b649822ddb9ea8f933ad8/AndroidManifest.xml:33:9-35:41
 	android:value
-		ADDED from [:arcore_client:] /Users/pariskaman/.gradle/caches/transforms-2/files-2.1/ccab0b4118002848e5ee1927af5b49c0/AndroidManifest.xml:35:13-38
+		ADDED from [:arcore_client:] /Users/pariskaman/.gradle/caches/transforms-2/files-2.1/79a61c784f4b649822ddb9ea8f933ad8/AndroidManifest.xml:35:13-38
 	android:name
-		ADDED from [:arcore_client:] /Users/pariskaman/.gradle/caches/transforms-2/files-2.1/ccab0b4118002848e5ee1927af5b49c0/AndroidManifest.xml:34:13-62
+		ADDED from [:arcore_client:] /Users/pariskaman/.gradle/caches/transforms-2/files-2.1/79a61c784f4b649822ddb9ea8f933ad8/AndroidManifest.xml:34:13-62
 activity#com.google.ar.core.InstallActivity
-ADDED from [:arcore_client:] /Users/pariskaman/.gradle/caches/transforms-2/files-2.1/ccab0b4118002848e5ee1927af5b49c0/AndroidManifest.xml:37:9-43:80
+ADDED from [:arcore_client:] /Users/pariskaman/.gradle/caches/transforms-2/files-2.1/79a61c784f4b649822ddb9ea8f933ad8/AndroidManifest.xml:37:9-43:80
 	android:excludeFromRecents
-		ADDED from [:arcore_client:] /Users/pariskaman/.gradle/caches/transforms-2/files-2.1/ccab0b4118002848e5ee1927af5b49c0/AndroidManifest.xml:40:13-46
+		ADDED from [:arcore_client:] /Users/pariskaman/.gradle/caches/transforms-2/files-2.1/79a61c784f4b649822ddb9ea8f933ad8/AndroidManifest.xml:40:13-46
 	android:launchMode
-		ADDED from [:arcore_client:] /Users/pariskaman/.gradle/caches/transforms-2/files-2.1/ccab0b4118002848e5ee1927af5b49c0/AndroidManifest.xml:42:13-43
+		ADDED from [:arcore_client:] /Users/pariskaman/.gradle/caches/transforms-2/files-2.1/79a61c784f4b649822ddb9ea8f933ad8/AndroidManifest.xml:42:13-43
 	android:exported
-		ADDED from [:arcore_client:] /Users/pariskaman/.gradle/caches/transforms-2/files-2.1/ccab0b4118002848e5ee1927af5b49c0/AndroidManifest.xml:41:13-37
+		ADDED from [:arcore_client:] /Users/pariskaman/.gradle/caches/transforms-2/files-2.1/79a61c784f4b649822ddb9ea8f933ad8/AndroidManifest.xml:41:13-37
 	android:configChanges
-		ADDED from [:arcore_client:] /Users/pariskaman/.gradle/caches/transforms-2/files-2.1/ccab0b4118002848e5ee1927af5b49c0/AndroidManifest.xml:39:13-74
+		ADDED from [:arcore_client:] /Users/pariskaman/.gradle/caches/transforms-2/files-2.1/79a61c784f4b649822ddb9ea8f933ad8/AndroidManifest.xml:39:13-74
 	android:theme
-		ADDED from [:arcore_client:] /Users/pariskaman/.gradle/caches/transforms-2/files-2.1/ccab0b4118002848e5ee1927af5b49c0/AndroidManifest.xml:43:13-77
+		ADDED from [:arcore_client:] /Users/pariskaman/.gradle/caches/transforms-2/files-2.1/79a61c784f4b649822ddb9ea8f933ad8/AndroidManifest.xml:43:13-77
 	android:name
-		ADDED from [:arcore_client:] /Users/pariskaman/.gradle/caches/transforms-2/files-2.1/ccab0b4118002848e5ee1927af5b49c0/AndroidManifest.xml:38:13-62
+		ADDED from [:arcore_client:] /Users/pariskaman/.gradle/caches/transforms-2/files-2.1/79a61c784f4b649822ddb9ea8f933ad8/AndroidManifest.xml:38:13-62

@@ -72,7 +72,7 @@
             android:value="portrait|landscape" />
         <meta-data
             android:name="unity.build-id"
-            android:value="3e29bb7f-2ea7-45d3-953b-ee1fd49e8aea" />
+            android:value="e9c9c2a2-1850-453b-8e97-c84f7aac2839" />
         <meta-data
             android:name="unityplayer.SkipPermissionsDialog"
             android:value="true" />
@@ -81,7 +81,7 @@
             android:value="required" /> <!-- The minimal version code of ARCore APK required for an app using this SDK. -->
         <meta-data
             android:name="com.google.ar.core.min_apk_version"
-            android:value="190805000" /> <!-- This activity is critical for installing ARCore when it is not already present. -->
+            android:value="200317000" /> <!-- This activity is critical for installing ARCore when it is not already present. -->
         <activity
             android:name="com.google.ar.core.InstallActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"

@@ -21,7 +21,17 @@ public class AnchorVisibility : MonoBehaviour
         if(distanceToWaypoint < 1 && demoScript.searching && !objectFound)
         {
             objectFound = true;
-            this.gameObject.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().enabled = true;
+            Animator[] animators = this.gameObject.GetComponentsInChildren<Animator>();
+            foreach (Animator a in animators)
+            {
+                a.enabled = true;
+            }
+            var meshRenderers = this.gameObject.GetComponentsInChildren<MeshRenderer>();
+            foreach (MeshRenderer m in meshRenderers)
+            {
+                m.enabled = true;
+            }
+            //this.gameObject.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().enabled = true;
             FindObjectOfType<BasicDemoScript>().objectsFound++;
         }
     }

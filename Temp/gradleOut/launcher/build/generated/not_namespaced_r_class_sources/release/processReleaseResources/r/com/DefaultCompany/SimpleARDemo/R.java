@@ -12,6 +12,7 @@ public final class R {
     public static final int __arcore_cancelButton=0x7f010000;
     public static final int __arcore_continueButton=0x7f010001;
     public static final int __arcore_messageText=0x7f010002;
+    public static final int unitySurfaceView=0x7f010003;
   }
   public static final class layout {
     public static final int __arcore_education=0x7f020000;
