@@ -1,4 +1,0 @@
-#Wed Jul 29 13:08:49 CDT 2020
-base.0=/Users/pariskaman/Desktop/UnityProjects/SimpleARDemo/Temp/gradleOut/launcher/build/intermediates/transforms/dexMerger/release/0
-path.0=classes.dex
-renamed.0=classes.dex
