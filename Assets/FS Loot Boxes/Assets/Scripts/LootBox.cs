@@ -127,12 +127,10 @@ public class LootBox : MonoBehaviour
     /// </summary>
     public void Open ()
     {
-        Debug.Log("Going to try to find demoScript");
+        //see if the demo script is ready to open chest
         BasicDemoScript demoScript = FindObjectOfType<BasicDemoScript>();
-        Debug.Log("LootBox Anim check");
-        if(!demoScript.foundAllItems)
+        if(!demoScript.readyToOpenChest)
         {
-            Debug.Log("Found all items = " + demoScript.foundAllItems);
             return;
         }
 

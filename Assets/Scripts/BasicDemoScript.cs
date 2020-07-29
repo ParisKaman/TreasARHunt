@@ -71,6 +71,7 @@ public class BasicDemoScript : MonoBehaviour
     public bool searching = false;
     public int objectsFound = 0;
     public bool foundAllItems = false;
+    public bool readyToOpenChest = false;
 
     // Start is called before the first frame update
     void Start()
@@ -144,7 +145,7 @@ public class BasicDemoScript : MonoBehaviour
                 break;
             case AppState.DemoStepFoundAllItems:
                 HideButton();
-                foundAllItems = true;
+                readyToOpenChest = true;
                 currentAppState = AppState.DemoStepComplete;
                 break;
             case AppState.DemoStepComplete:

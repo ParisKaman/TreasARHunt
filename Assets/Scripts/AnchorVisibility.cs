@@ -26,8 +26,8 @@ public class AnchorVisibility : MonoBehaviour
             {
                 a.enabled = true;
             }
-            var meshRenderers = this.gameObject.GetComponentsInChildren<MeshRenderer>();
-            foreach (MeshRenderer m in meshRenderers)
+            var meshRenderers = this.gameObject.GetComponentsInChildren<Renderer>();
+            foreach (Renderer m in meshRenderers)
             {
                 m.enabled = true;
             }

@@ -101,31 +101,9 @@ public class ARTapToPlace : MonoBehaviour
             {
                 r.enabled = false;
             }
-            //anchor.gameObject.transform.GetChild(0).GetChild(0).GetComponent<MeshRenderer>().enabled = false;
         }
     }
 
-    private void HideObjectAndChildren(GameObject go)
-    {
-        //attempt to hide Object
-        Debug.Log("Attempting to hide " + go.transform.name);
-        MeshRenderer meshRenderer = go.GetComponent<MeshRenderer>();
-        if(meshRenderer != null)
-        {
-            meshRenderer.enabled = false;
-            Debug.Log(go.transform.name + " rendered = " + meshRenderer.enabled);
-        }
-
-        //iterate through children and call method on that child
-        if(go.transform.childCount > 0)
-        {
-            Debug.Log(go.transform.name + " has " + go.transform.childCount + " children.");
-            for(int i = 0; i < go.transform.childCount; i++)
-            {
-                HideObjectAndChildren(go.transform.GetChild(i).gameObject);
-            }
-        }
-    }
 
     private void CleaupSpawnedObject()
     {
