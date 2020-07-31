@@ -14,7 +14,7 @@ public class AnchorVisibility : MonoBehaviour
     }
 
 
-    bool InLineOfSight(Camera c,GameObject go)
+    bool InFrontOfCamera(Camera c,GameObject go)
     {
         var planes = GeometryUtility.CalculateFrustumPlanes(c);
         var point = go.transform.position;
@@ -31,7 +31,7 @@ public class AnchorVisibility : MonoBehaviour
     {
         BasicDemoScript demoScript = FindObjectOfType<BasicDemoScript>();
         float distanceToWaypoint = Vector3.Distance(this.gameObject.transform.position,Camera.main.transform.position);
-        if(distanceToWaypoint < 1.5 && InLineOfSight(Camera.main, this.gameObject) && demoScript.searching && !objectFound)
+        if(distanceToWaypoint < 1.5 && InFrontOfCamera(Camera.main, this.gameObject) && demoScript.searching && !objectFound)
         {
             objectFound = true;
             demoScript.objectsFound++;
@@ -49,11 +49,11 @@ public class AnchorVisibility : MonoBehaviour
             InventoryManager inventoryManager = FindObjectOfType<InventoryManager>();
             if(this.gameObject.transform.GetChild(0).name.Contains("KeyContainer"))
             {
-                inventoryManager.KeyFound();
+                //inventoryManager.KeyFound();
             }
             else if (this.gameObject.transform.GetChild(0).name.Contains("ShovelContainer"))
             {
-                inventoryManager.ShovelFound();
+                //inventoryManager.ShovelFound();
             }
 
             Animator[] animators = this.gameObject.GetComponentsInChildren<Animator>();

@@ -48,7 +48,6 @@ public class ChestManager : MonoBehaviour
         {
             return;
         }
-        Debug.Log("Showing Chest");
         Animator[] animators = chestPrefab.gameObject.GetComponentsInChildren<Animator>();
         foreach (Animator a in animators)
         {
@@ -68,7 +67,6 @@ public class ChestManager : MonoBehaviour
         {
             return;
         }
-        Debug.Log("Hiding Dirt");
         var renderers = dirtPrefab.gameObject.GetComponentsInChildren<Renderer>();
         foreach (Renderer r in renderers)
         {
@@ -83,7 +81,6 @@ public class ChestManager : MonoBehaviour
         {
             return;
         }
-        Debug.Log("Showing Dirt");
         var renderers = dirtPrefab.gameObject.GetComponentsInChildren<Renderer>();
         foreach (Renderer r in renderers)
         {
@@ -98,7 +95,6 @@ public class ChestManager : MonoBehaviour
         //if placing, disable dirt so we are just showing chest
         if(placing)
         {
-            Debug.Log("Placing");
             HideDirt();
         }
         else if (!found)
@@ -113,12 +109,10 @@ public class ChestManager : MonoBehaviour
             ShowDirt();
             if(!unearthed)
             {
-                Debug.Log("Just Dirt");
                 HideChest();
             }
             else
             {
-                Debug.Log("Unearthed");
                 HideDirt();
                 ShowChest();
             }

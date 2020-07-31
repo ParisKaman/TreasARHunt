@@ -34,6 +34,22 @@ public class InventoryManager : MonoBehaviour
         chestManager = FindObjectOfType<ChestManager>();
     }
 
+    public void PickupItem(GameObject itemContainer)
+    {
+        string containerName = itemContainer.transform.name;
+        Debug.Log("Picking up item within " + containerName);
+        if(containerName.Contains("KeyContainer"))
+        {
+            KeyFound();
+            Destroy(itemContainer);
+        }
+        else if (containerName.Contains("ShovelContainer"))
+        {
+            ShovelFound();
+            Destroy(itemContainer);
+        }
+    }
+
     public void KeyFound()
     {
         item1.SetActive(true);

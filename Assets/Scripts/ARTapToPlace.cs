@@ -27,6 +27,7 @@ public class ARTapToPlace : MonoBehaviour
     public bool inUpdateMethod;
     public bool validAtIndicatorStart;
     private bool movingAnchor;
+    private bool selectMode = false;
 
     [SerializeField]
     private GameObject confirmButton;
@@ -42,6 +43,7 @@ public class ARTapToPlace : MonoBehaviour
         tryingToUpdate = false;
         inCreateAnchor = false;
         movingAnchor = false;
+        selectMode = false;
     }
 
     // Update is called once per frame
@@ -61,10 +63,33 @@ public class ARTapToPlace : MonoBehaviour
                 {
                       PlaceObject();
                 }
+                if(selectMode)
+                {
+                    AttemptItemSelect();
+                }
                 if (Input.GetTouch(0).phase == TouchPhase.Began && !inCreateAnchor)
                 {
                 }
             }
+        }
+    }
+
+    public void AttemptItemSelect()
+    {
+        Debug.Log("Attempting select");
+        Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
+        RaycastHit raycastHit;
+        InventoryManager inventoryManager = FindObjectOfType<InventoryManager>();
+
+        //make a hitMask so that the raycast only hits objects in the layer items
+        int hitMask = 1 << 9;
+        if(Physics.Raycast(ray, out raycastHit, Mathf.Infinity, hitMask))
+        {
+            GameObject objectHit = raycastHit.transform.gameObject;
+            GameObject objectContainer = objectHit.transform.parent.gameObject;
+            string containerName = objectContainer.transform.name;
+            inventoryManager.PickupItem(objectContainer);
+
         }
     }
 
@@ -118,7 +143,10 @@ public class ARTapToPlace : MonoBehaviour
       inCreateAnchor = enabled;
     }
 
-
+    public void EnableSelect(bool enabled)
+    {
+      selectMode = enabled;
+    }
 
     private void PlaceObject()
     {

@@ -147,6 +147,7 @@ public class BasicDemoScript : MonoBehaviour
                 HideButton();
                 ShowInventory();
                 searching = true;
+                arTapToPlace.EnableSelect(true);
                 InventoryManager inventoryManager = FindObjectOfType<InventoryManager>();
                 inventoryManager.SearchBegins();
                 currentAppState = AppState.DemoStepSearching;
@@ -155,6 +156,7 @@ public class BasicDemoScript : MonoBehaviour
                 ShowButton();
                 HideInventory();
                 searching = false;
+                arTapToPlace.EnableSelect(false);
                 currentAppState = AppState.DemoStepFoundAllItems;
                 break;
             case AppState.DemoStepFoundAllItems:
