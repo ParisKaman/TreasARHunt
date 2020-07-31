@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.XR.ARFoundation;
 
 public class BasicDemoScript : MonoBehaviour
 {
@@ -116,6 +117,16 @@ public class BasicDemoScript : MonoBehaviour
         inventory.SetActive(false);
     }
 
+    public void DisablePlaneColliders()
+    {
+        ARPlaneManager arPlaneManager = FindObjectOfType<ARPlaneManager>();
+        arPlaneManager.planePrefab.GetComponent<MeshCollider>().enabled = false;
+        foreach (var plane in arPlaneManager.trackables)
+        {
+            plane.gameObject.GetComponent<MeshCollider>().enabled = false;
+        }
+    }
+
 
     public void AdvanceDemo()
     {
@@ -162,6 +173,7 @@ public class BasicDemoScript : MonoBehaviour
             case AppState.DemoStepFoundAllItems:
                 HideButton();
                 readyToOpenChest = true;
+                DisablePlaneColliders();
                 currentAppState = AppState.DemoStepComplete;
                 break;
             case AppState.DemoStepComplete:
